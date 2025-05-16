@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Horse Rider Game</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horse Jump Game</title>
+  <style>
+    body {
+      margin: 0; 
+      overflow: hidden; 
+      background: #e0f7fa;
+      font-family: Arial, sans-serif;
+    }
+    #gameCanvas {
+      display: block;
+      background: #90caf9;
+    }
+    #scoreBoard {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+    }
+    #gameOverScreen {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px 50px;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 10px;
+      display: none;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    #restartBtn {
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 8px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #0288d1;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <div class="game">
-    <div id="horse"></div>
-    <div id="pole"></div>
-  </div>
-  <script src="script.js"></script>
+
+<div id="scoreBoard">Score: 0</div>
+<canvas id="gameCanvas"></canvas>
+
+<div id="gameOverScreen">
+  <div id="gameOverText">Game Over! Final Score: 0</div>
+  <button id="restartBtn">Restart</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
